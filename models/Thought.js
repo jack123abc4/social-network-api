@@ -13,6 +13,10 @@ const reactionSchema = new Schema(
       required: true,
       max: 280
     },
+    username: {
+      type: String,
+      required: true
+    },
     createdAt: {
       type: Date,
       default: Date.now(),
@@ -40,7 +44,10 @@ const thoughtSchema = new Schema(
       default: Date.now(),
       get: formatDate
     },
-    // username
+    username: {
+      type: String,
+      required: true,
+    },
     reactions: [reactionSchema],
   },
   {
